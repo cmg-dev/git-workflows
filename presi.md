@@ -27,6 +27,8 @@ git Workflows sollen
 * zur Sicherheit der Entwickler beitragen
 
 * die Akzeptanz von VCS steigern
+
+* Integration neuer Teammitglieder (durch definierter Prozess)
 ]
 
 ---
@@ -139,10 +141,22 @@ Wann startet ein Branch
 
 * support
 
+]
+
+---
+class:
+background-image: url(background.png)
+
+.right_column[
+
+### Start eines Workflows
+
+Wie endet ein Branch
 * develop
 
-* release
+* master
 
+  * release
 ]
 
 ---
@@ -238,5 +252,5 @@ background-image: url(background.png)
 
 ### git-flow
 
-[git flow](http://5minds.github.io/git-flow-bestpractice)
+[git flow](http://7minds.github.io/git-flow-bestpractice)
 ]
