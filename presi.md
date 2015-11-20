@@ -148,10 +148,10 @@ class:
 background-image: url(background.png)
 
 .right_column[
-
 ### Start eines Workflows
 
 Wie endet ein Branch
+
 * develop
 
 * master
@@ -174,7 +174,6 @@ background-image: url(background.png)
 ### Ende eines Workflows
 
 Tests erfolgreich!
-
 -> Code Review
 
 ]
