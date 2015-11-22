@@ -22,6 +22,7 @@ git Workflows sollen
 * die Flexibilität von git nutzen
 * die Qualität des Codes verbessern
 * zur Sicherheit der Entwickler beitragen
+* Wissensttransfer ermöglichen
 * die Akzeptanz von VCS steigern
 * Agilität fördern
 ]
@@ -40,7 +41,7 @@ background-image: url(background.png)
 
 ### Landschaft
 
-**systeme**
+**Systeme**
 
 1. CI-Server
 1. Build-Server/ Test-Server
@@ -60,6 +61,17 @@ background-image: url(img/s1_map.png)
 
 ### Landschaft
 
+---
+class:
+background-image: url(background.png)
+
+.right_column[
+
+### git-Workflow Allgemein
+
+Viele Arbeitsgruppen wechseln zu git, weil sie die Fähigkeit suchen mit vielen Teams parallel zu arbeiten und 
+zu verschiedenen Zeitpunkten (meist spät im Entwicklungsprozess) die Änderungen zusammen zu führen.
+]
 
 ---
 class: middle, center
@@ -102,7 +114,7 @@ background-image: url(background.png)
 
 -> Beliebt im Enterprise Umfeld
 
-Häufig bei cloesd Source Projekten 
+Häufig bei *Closed Source*-Projekten an zu treffen
 
 ]
 
@@ -119,7 +131,7 @@ background-image: url(background.png)
 1. Kernel Entwicklung
 2. Public-Repository (Pull-Requests)
 
--> de facto Standard bei OpenSource Projekten
+-> de facto Standard bei *Open Source*-Projekten
 
 ]
 
@@ -133,7 +145,7 @@ background-image: url(img/s3_DIC_wf.png)
 
 **Diktator Workflow**
 
-Entwickler -> Leutnants -> Diktator -> Repo
+Entwickler -> Leutnants -> Diktator -> Repository
 
 * Alle *pullen* von zentraler Quelle
 * Nur *Diktator* hat *push* rechte
@@ -150,8 +162,8 @@ background-image: url(img/s2_IM_wf.png)
 
 **Integration Manager Workflow**
 
-* IM *pullt* aus öffentlichen Entwickler Repos
-* Entwickler *pushen* in ihr öffentliches Repo
+* IM *pullt* aus öffentlichen Entwickler Repositories
+* Entwickler *pushen* in ihr öffentliches Repository
 * IM hat Berechtigung *push* Berechtigung
 ]
 
@@ -173,11 +185,11 @@ background-image: url(background.png)
 
 Das einfachste Umfeld ist wahrscheinlich das ein bis zwei Entwickler an einem privaten Projekt arbeiten. *Privat* bedeutet hier, *Closed Source*.
 
-Alle Entwickler haben *push*-Rechte zu dem Repository.
+* Alle Entwickler haben *push*-Rechte zu dem Repository
 
-Dieser Workflow entspricht denen anderer zentralisierten Systeme (SVN...)
+* Dieser Workflow entspricht denen anderer zentralisierten Systeme
 
-Allerdings hat man die Vorteile von git. 
+* Allerdings hat man die Vorteile von git (einfaches branching/ merging)
 ]
 
 ---
@@ -206,10 +218,9 @@ background-image: url(background.png)
 
 Nach einem *Einfachen Team* ist dieser Workflow der nächst einfache.
 
-Mehrere Entwickler arbeiten agil zusammen. Entwickler können Teams wechseln und an verschiedenen Stellen arbeiten.
-
-Es gibt Regeln für die Zusammenarbeit.
-
+* Mehrere Entwickler arbeiten agil zusammen
+* Entwickler können Teams wechseln und an verschiedenen Stellen arbeiten.
+* Es gibt Regeln für die Zusammenarbeit.
 ]
 
 ---
@@ -258,6 +269,18 @@ background-image: url(img/s4_WF_goodness.png)
 class: middle, center
 background-image: url(background.png)
 
+## Entwicklung
+
+---
+class: center, top
+background-image: url(img/s1_1_map_Dev.png)
+
+## Entwicklung
+
+---
+class: middle, center
+background-image: url(background.png)
+
 ## Start eines Workflows
 
 ---
@@ -268,13 +291,15 @@ background-image: url(background.png)
 
 ### Start eines Workflows
 
-Wie **startet** ein Branch
+Wie **startet** ein Branch?
 
 * feature
 * hotfix
 * support
 
-Einem Branch sollte immer einem *Tracking* unterliegen. Bspw. ein Ticket oder eine User-Story.
+Einem Branch sollte immer einem *Tracking* unterliegen. Beispielsweise ein Ticket oder eine User-Story existiert zu der Änderung.
+
+Im Tracking sind die Anforderungen/ Vorgaben hinterlegt.
 ]
 
 ---
@@ -285,7 +310,7 @@ background-image: url(background.png)
 
 ### Start eines Workflows
 
-Wie **endet** ein Branch
+Wie **endet** ein Branch?
 
 * develop
 * master
@@ -303,23 +328,26 @@ background-image: url(background.png)
 ## Ende eines Workflows
 
 ---
+class: center, top
+background-image: url(img/s1_1_map_test.png)
+
+## Tests
+
+---
 class:
 background-image: url(background.png)
 
 .right_column[
 
-### Ende eines Workflows
+### Ende der Tests 
 
 Tests erfolgreich!
--> Code Review
-
+-> Peer Review
 ]
 
 ---
 class: middle, center
-background-image: url(background.png)
-
-## Code Reviews
+background-image: url(img/s10_peer_review.jpg)
 
 ---
 class:
@@ -327,9 +355,93 @@ background-image: url(background.png)
 
 .right_column[
 
-### Code Reviews
+### Peer Reviews
 
-[Code Reviews](http://blogs.atlassian.com/2014/03/every-team-needs-kick-ass-code-reviews/)
+**Wer?**
+
+1. Ein Erfahrener Entwickler
+2. Die Verantwortlichen für die Entwicklung
+
+Faustregel: **nicht mehr** als 3 Entwickler
+
+]
+
+---
+class:
+background-image: url(background.png)
+
+.right_column[
+
+### Peer Reviews
+
+**Warum**?
+
+1. Wissenstransfer
+2. Qualitätssicherung 
+
+[Peer Reviews](http://blogs.atlassian.com/2014/03/every-team-needs-kick-ass-code-reviews/)
+]
+
+---
+class:
+background-image: url(background.png)
+
+.right_column[
+
+### Peer Reviews
+
+**Wie?**
+
+Dabei laufen verschiedene Qualitätsprozesse ab:
+
+* Der Programmierer entdeckt selbst Verbesserungen
+* Der Rezensent stellt Verständnisfragen 
+* Der Rezensent entdeckt Verbesserungsmöglichkeiten
+* Der Rezensent empfiehlt diese dem Programmierer
+]
+
+---
+class:
+background-image: url(background.png)
+
+.right_column[
+
+### Peer Reviews
+
+**Wie?**
+
+Der Reviewer muss dabei folgendes beachten:
+
+* Es geht nicht um *Zeigefinger*
+* Vermeidung von: "Das ist Falsch!"
+* besser: "Warum wurde das so umgesetzt?"; "Ist das problematisch?";
+  "Können wir das besser?"
+* Hilfestellung geben
+* Teamgefühl stärken
+]
+
+---
+class: center, middle
+background-image: url(background.png)
+
+### Peer Reviews - Tools
+
+---
+class: center, top
+background-image: url(img/s14_diff.jpg)
+
+
+### Peer Reviews - Tools
+---
+class:
+background-image: url(background.png)
+
+.right_column[
+
+### Peer Reviews - Tools
+
+* [OS X Tools](http://www.git-tower.com/blog/diff-tools-mac/)
+* [Übersicht](https://en.wikipedia.org/w/index.php?title=Comparison_of_file_comparison_tools&oldid=691537231)
 ]
 
 ---
@@ -346,9 +458,14 @@ background-image: url(background.png)
 
 ### Pull Requests
 
-Entwickler
+Eine Möglichkeit für Entwickler ohne *pusch*-Berechtigung, Änderungen mit Anderen zu teilen.
 
-Reviewer
+Viele Möglichkeiten:
+
+* Mailingliste
+* Webseiten
+* Portale
+* ...
 
 ]
 
@@ -356,21 +473,7 @@ Reviewer
 class: middle, center
 background-image: url(background.png)
 
-## Vorstellung spezieller Workflows
-
----
-class:
-background-image: url(background.png)
-
-.right_column[
-
-### git-Workflow Allgemein
-
-Viele Arbeitsgruppen wechseln zu git, weil sie dir Fähigkeit suchen mit vielen Teams parallel zu arbeiten und 
-zu verschiedenen Zeitpunkten (meist spät im Entwicklungsprozess) die Änderungen zusammen zu führen.
-
-Many groups switch to Git because of this ability to have multiple teams working in parallel, merging the different lines of work late in the process. The ability of smaller subgroups of a team to collaborate via remote branches without necessarily having to involve or impede the entire team is a huge benefit of Git. The sequence for the workflow you saw here is something like this:
-]
+## Pull Request - Beispiel
 
 ---
 class: middle, center
@@ -394,46 +497,48 @@ background-image: url(img/s7_GH_wf.png)
 class:
 background-image: url(background.png)
 
-.example_page[
+.right_column[
 
-#### GitHub- Workflow Zusammenfassung
+#### GitHub-Workflow Zusammenfassung
 
-Aufbauend auf Pull Requests.
+* aufbauend auf Pull Requests.
+* simpel
+* automatisches Deployment
+* keine Unterteilung der *feature*-Branches
 ]
 
 ---
 class: center, middle
 background-image: url(background.png)
 
-## Stash_Workflow
+## Stash Workflow
 
 ---
 class: center, top
 background-image: url(img/s8_Stash_wf.png)
 
-### Stash_Workflow 
+### Stash Workflow 
 
 ---
 class:
 background-image: url(background.png)
 
-.example_page[
+.right_column[
 
-#### Stash_Workflow Zusammenfassung
+#### Stash Workflow Zusammenfassung
 
-* Der master-Zweig wird stabil gehalten, nicht aber in Produktionsqualität wie beim GitHub-Workflow
-* Die Qualität bzw. Buildstabilität schwankt zwischen „Alpha“ und „Release Candidate“. Unterstützt wird dies durch den Einsatz von branch-aware Continous Integration, automatischer Testabdeckung und Performance-Monitoring der Buildresultate.
-* Pro User Story ein Zweig (wird von master aus erstellt)
+* Der master-Zweig wird stabil gehalten, nicht aber in Produktionsqualität 
+* Die Qualität bzw. Buildstabilität schwankt zwischen *Alpha* und 
+  *Release Candidate*
+* Pro User Story ein Zweig 
 * Pro Release ein Zweig
 * Pro Bugfix ein Zweig (automatisch zurück integriert in Release-Zweig)
-* Pull Requests werden für fertige Implementierungen erstellt und nach einem erfolgten Code Review durch mindestens zwei Team-Mitglieder in den master-Zweig aufgenommen.
+* Pull Requests werden für fertige Implementierungen erstellt und nach Peer Review übernommen 
 ]
 
 ---
 class: center, middle
-background-image: url(background.png)
-
-## git-flow Workflow 
+background-image: url(img/s11_flow_start.jpg)
 
 ---
 class: center, top
@@ -452,12 +557,15 @@ background-image: url(background.png)
 
 Dauerhafte Zweige:
 
-* develop: Enthält die zurzeit in Entwicklung befindliche Codebasis. Aktuellster Stand immer im zentralen Repo.
-* master: Enthält Snapshots von stabilen (= getesteten, gereviewten) Ständen der Codebasis. Aktuellster Stand ist immer im zentralen Repo.
+* **develop**: Enthält die zurzeit in Entwicklung befindliche Codebasis 
+* **master**. Enthält Snapshots von stabilen (= getesteten, gereviewten) Ständen der Software
 
 Temporäre Branches:
-* Feature-Branches: Werden vom Entwickler erstellt, z.B. wenn ein Ticket, welches ein Feature beschreibt, bearbeitet wird. Abgeschlossene Arbeiten werden nach develop gemerged
-* Release-Branches: Werden von develop gebranched und enthalten den Veröffentlichungskandidaten. In Release-Branches werden keine neuen Features implementiert, sondern nur noch Fehler ausgemerzt und die Codebasis nochmals intensiv getestet.
+
+* **feature**-Branches: Werden vom Entwickler erstellt (z.B. wenn ein Ticket bearbeitet wird)
+* **release**-Branches: Werden von develop gebranched und enthalten den Veröffentlichungskandidaten
+
+Eine gute Praxis ist in *release*-Branches werden keine neuen Features implementiert, sondern nur noch Fehler ausgemerzt und die Codebasis nochmals intensiv getestet.
 
 ]
 
@@ -469,14 +577,17 @@ background-image: url(background.png)
 
 ### git-flow Workflow 
 
-Vorstellung von [git flow](http://5minds.github.io/git-flow-bestpractice)
+Detailierte Vorstellung von [git flow](http://cmg-dev.github.io/git-flow-bestpractice)
 ]
 
 ---
 class: center, middle
-background-image: url(background.png)
+background-image: url(img/s13_flow_finish.jpg)
 
-## git Workflows - Best Practice
+---
+class: center, middle
+background-image: url(img/s12_best_practice.jpg)
+
 
 ---
 class:
