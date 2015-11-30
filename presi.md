@@ -22,7 +22,7 @@ git Workflows sollen
 * die Flexibilität von git nutzen
 * die Qualität des Codes verbessern
 * zur Sicherheit der Entwickler beitragen
-* Wissensttransfer ermöglichen
+* Wissenstransfer ermöglichen
 * die Akzeptanz von VCS steigern
 * Agilität fördern
 ]
@@ -51,7 +51,7 @@ background-image: url(background.png)
 **Personen**
 1. Entwickler
 1. Reviewer
-1. Produkt Owner
+1. Product Owner
 1. Kunde
 ]
 
@@ -112,9 +112,9 @@ background-image: url(background.png)
 1. git flow
 2. Stash
 
--> Beliebt im Enterprise Umfeld
+-> beliebt im Enterprise Umfeld
 
-Häufig bei *Closed Source*-Projekten an zu treffen
+Häufig bei *Closed Source*-Projekten anzutreffen
 
 ]
 
@@ -148,7 +148,7 @@ background-image: url(img/s3_DIC_wf.png)
 Entwickler -> Leutnants -> Diktator -> Repository
 
 * Alle *pullen* von zentraler Quelle
-* Nur *Diktator* hat *push* rechte
+* Nur *Diktator* hat *push* Rechte
 * Arbeiten mit Pull-Requests/ Mailing List
 ]
 
@@ -164,7 +164,7 @@ background-image: url(img/s2_IM_wf.png)
 
 * IM *pullt* aus öffentlichen Entwickler Repositories
 * Entwickler *pushen* in ihr öffentliches Repository
-* IM hat Berechtigung *push* Berechtigung
+* IM hat *push* Berechtigung
 ]
 
 ---
@@ -183,9 +183,9 @@ background-image: url(background.png)
 
 **Einfaches Team**
 
-Das einfachste Umfeld ist wahrscheinlich das ein bis zwei Entwickler an einem privaten Projekt arbeiten. *Privat* bedeutet hier, *Closed Source*.
+Das einfachste Umfeld ist das ein bis zwei Entwickler an einem privaten Projekt arbeiten. *Privat* bedeutet hier, *Closed Source*.
 
-* Alle Entwickler haben *push*-Rechte zu dem Repository
+* Alle Entwickler haben *push*-Rechte zum Repository
 
 * Dieser Workflow entspricht denen anderer zentralisierten Systeme
 
@@ -203,6 +203,7 @@ background-image: url(img/s5_wf_private-developer.png)
 **Einfaches Team**
 
 * Alice und Bob arbeiten für sich
+
 * keine Vorgaben/ Regeln zum *commit*/*push*/*merge*- Verhalten
 ]
 
@@ -249,12 +250,13 @@ background-image: url(background.png)
 
 **Forked Public Project**
 
-Ein etwas realistischerer Workflow (mehr als ein Team, >10 Entwickler)
+Ein realistischerer Workflow (mehr als ein Team, >10 Entwickler)
 
 * Kann zentral und dezentral sein
-* Späte Zusammenführung von Änderungen verschiedener Teams
+* Späte Zusammenführung der Änderungen verschiedener Teams
 
 Nachteile:
+
 * Kann Probleme mit der Stabilität hervorrufen
 
 ]
@@ -297,9 +299,9 @@ Wie **startet** ein Branch?
 * hotfix
 * support
 
-Einem Branch sollte immer einem *Tracking* unterliegen. Beispielsweise ein Ticket oder eine User-Story existiert zu der Änderung.
+Einem Branch sollte immer einem *Tracking* unterliegen. Beispielsweise ein Ticket oder eine User-Story zu der Änderung.
 
-Im Tracking sind die Anforderungen/ Vorgaben hinterlegt.
+Im Tracking sind die Anforderungen/ Vorgaben hinterlegt, die umzusetzen sind.
 ]
 
 ---
@@ -394,10 +396,10 @@ background-image: url(background.png)
 
 Dabei laufen verschiedene Qualitätsprozesse ab:
 
-* Der Programmierer entdeckt selbst Verbesserungen
-* Der Rezensent stellt Verständnisfragen 
-* Der Rezensent entdeckt Verbesserungsmöglichkeiten
-* Der Rezensent empfiehlt diese dem Programmierer
+* Der Entwickler entdeckt selbst Verbesserungen
+* Der Reviewer stellt Verständnisfragen 
+* Der Reviewer entdeckt Verbesserungsmöglichkeiten
+* Der Reviewer empfiehlt diese dem Programmierer
 ]
 
 ---
@@ -413,7 +415,7 @@ background-image: url(background.png)
 Der Reviewer muss dabei folgendes beachten:
 
 * Es geht nicht um *Zeigefinger*
-* Vermeidung von: "Das ist Falsch!"
+* Vermeidung von: "Das ist Falsch!"; "Das verstößt gegen die Konventionen"
 * besser: "Warum wurde das so umgesetzt?"; "Ist das problematisch?";
   "Können wir das besser?"
 * Hilfestellung geben
@@ -563,9 +565,9 @@ Dauerhafte Zweige:
 Temporäre Branches:
 
 * **feature**-Branches: Werden vom Entwickler erstellt (z.B. wenn ein Ticket bearbeitet wird)
-* **release**-Branches: Werden von develop gebranched und enthalten den Veröffentlichungskandidaten
+* **release**-Branches: Werden von develop gebrancht und enthalten den Veröffentlichungskandidaten
 
-Eine gute Praxis ist in *release*-Branches werden keine neuen Features implementiert, sondern nur noch Fehler ausgemerzt und die Codebasis nochmals intensiv getestet.
+Eine gute Praxis: Im *release*-Branch werden keine neuen Features implementiert, sondern nur noch Fehler ausgemerzt und die Codebasis nochmals intensiv getestet.
 
 ]
 
@@ -597,13 +599,13 @@ background-image: url(img/s10_SemVer.png)
 
 ### Semantic Versioning
 
-Verwendung von *Semantic Verwendung* für Releasekennzeichnun.
+Verwendung von *SemVer* für Releasekennzeichnun.
 
 Bei einer Versionsnummer der Art MAJOR.MINOR.PATCH, bedeuten:
 
 * **MAJOR** Version, die inkompatible Änderungen beinhaltet
 * **MINOR** Inkrement, wenn Änderungen abwärtskompatibel
-* **PATCH** Erhöhung, wenn abwärtskompatibler Bugfix
+* **PATCH** Inkrement, wenn abwärtskompatibler Bugfix
 
 Zusätzliche Label sind als Erweiterung verfügbar zum MAJOR.MINOR.PATCH- Format
 ]
@@ -622,7 +624,6 @@ Leistungsstarke Abläufe und Tool für eine auf git basierende Entwicklung.
 Eine Beschreibung und Erklärung gibt der [Autor](http://nvie.com/posts/a-successful-git-branching-model) selbst.
 
 Eine [git-flow Einführung](http://5minds.github.io/git-flow-bestpractice).
-
 
 ]
 
